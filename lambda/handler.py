@@ -6,7 +6,7 @@ TABLE = "job-applications"
 ddb = boto3.resource("dynamodb").Table(TABLE)
 
 CORS = {
-    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Origin": "https://d11prb57h52eru.cloudfront.net",
     "Access-Control-Allow-Headers": "Content-Type",
     "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
 }
