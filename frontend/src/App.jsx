@@ -77,8 +77,8 @@ export default function App() {
     setModalLoading(true)
     try {
       if (editingJob) {
-        const updated = await updateJob(editingJob.id, formData)
-        setJobs(prev => prev.map(j => j.id === updated.id ? updated : j))
+        const updated = await updateJob(editingJob.applicationId, formData)
+        setJobs(prev => prev.map(j => j.applicationId === updated.applicationId ? updated : j))
         showSnackbar('Application updated')
       } else {
         const newJob = await createJob(formData)
@@ -93,7 +93,7 @@ export default function App() {
 
   async function handleDelete(id) {
     await deleteJob(id)
-    setJobs(prev => prev.filter(j => j.id !== id))
+    setJobs(prev => prev.filter(j => j.applicationId !== id))
     showSnackbar('Application removed', 'info')
   }
 

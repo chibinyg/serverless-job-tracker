@@ -157,10 +157,10 @@ export default function JobTable({ jobs, sortConfig, onSort, onEdit, onDelete })
         </TableHead>
         <TableBody>
           {jobs.map(job => (
-            <TableRow key={job.id}>
+            <TableRow key={job.applicationId}>
               {COLUMNS.map(col => {
                 if (col.id === 'actions') {
-                  const isConfirming = confirmingId === job.id
+                  const isConfirming = confirmingId === job.applicationId
                   return (
                     <TableCell key="actions" align="right" sx={{ whiteSpace: 'nowrap' }}>
                       {isConfirming ? (
@@ -168,7 +168,7 @@ export default function JobTable({ jobs, sortConfig, onSort, onEdit, onDelete })
                           <Tooltip title="Confirm delete">
                             <IconButton
                               size="small"
-                              onClick={() => handleConfirmDelete(job.id)}
+                              onClick={() => handleConfirmDelete(job.applicationId)}
                               sx={{ color: '#b71c1c', '&:hover': { color: '#b71c1c', backgroundColor: '#fce4ec' } }}
                             >
                               <CheckIcon fontSize="small" />
@@ -188,7 +188,7 @@ export default function JobTable({ jobs, sortConfig, onSort, onEdit, onDelete })
                             </IconButton>
                           </Tooltip>
                           <Tooltip title="Delete">
-                            <IconButton size="small" onClick={() => handleDeleteClick(job.id)}>
+                            <IconButton size="small" onClick={() => handleDeleteClick(job.applicationId)}>
                               <DeleteOutlineIcon fontSize="small" />
                             </IconButton>
                           </Tooltip>
