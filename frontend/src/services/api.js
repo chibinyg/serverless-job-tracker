@@ -7,7 +7,7 @@ export const STATUS_VALUES = [
   'Withdrawn',
 ]
 
-const BASE = 'https://n4ivvegz7k.execute-api.us-east-1.amazonaws.com/prod'
+const BASE = 'https://vitkvegich.execute-api.us-east-1.amazonaws.com/prod'
 
 export async function getJobs() {
   const res = await fetch(`${BASE}/jobs`)
