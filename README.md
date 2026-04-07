@@ -2,7 +2,6 @@
 
 > A fully serverless job application tracker built on AWS — track every application from first click to offer letter.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-CloudFront-orange?logo=amazonaws)](https://d3s6pydirsxv3z.cloudfront.net)
 [![AWS](https://img.shields.io/badge/AWS-Serverless-FF9900?logo=amazonaws&logoColor=white)](https://aws.amazon.com/)
 [![Terraform](https://img.shields.io/badge/IaC-Terraform-7B42BC?logo=terraform&logoColor=white)](https://www.terraform.io/)
 [![React](https://img.shields.io/badge/Frontend-React%2019-61DAFB?logo=react&logoColor=black)](https://react.dev/)
@@ -124,8 +123,6 @@ GitHub Actions will build the frontend, deploy the Lambda, sync assets to S3, an
 
 ## API Reference
 
-Base URL: `https://vitkvegich.execute-api.us-east-1.amazonaws.com/prod`
-
 | Method | Path | Description |
 |---|---|---|
 | `GET` | `/jobs` | List all job applications |
@@ -134,18 +131,6 @@ Base URL: `https://vitkvegich.execute-api.us-east-1.amazonaws.com/prod`
 | `DELETE` | `/jobs/{id}` | Delete an application |
 
 ### Job application schema
-
-```json
-{
-  "applicationId": "uuid-string",
-  "company": "Acme Corp",
-  "role": "Software Engineer",
-  "status": "Interviewing",
-  "dateApplied": "2026-04-07",
-  "url": "https://jobs.acme.com/123",
-  "notes": "Referral from Jane"
-}
-```
 
 ---
 
